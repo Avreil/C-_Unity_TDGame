@@ -5191,6 +5191,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 2e107a5272141574ba4315850cb69fce,
         type: 3}
+    - target: {fileID: 114345733874506428, guid: 27c3188604681e94db4a742afb457fd4,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandardTurret
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c3188604681e94db4a742afb457fd4, type: 2}
   m_IsPrefabAsset: 0
@@ -8007,6 +8012,7 @@ GameObject:
   - component: {fileID: 1274483867}
   - component: {fileID: 1274483866}
   - component: {fileID: 1274483868}
+  - component: {fileID: 1274483869}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -8058,6 +8064,18 @@ MonoBehaviour:
     type: 2}
   missileLauncherTurret: {fileID: 1463337103788244, guid: f577e194773902240ada2f53ef6e2485,
     type: 2}
+--- !u!114 &1274483869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274483865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4228ce583c797f3448d4f53b8ad0ac31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!4 &1274601683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4293046956091054, guid: c47cf89c3d134a84581b6d4cb91adbd0,
@@ -8493,7 +8511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.20754719, g: 0.14978641, b: 0.14978641, a: 0.7490196}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8526,6 +8544,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0137282d09902be41b0acdb2fc699352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 1162408230778014, guid: 7fe57f030abddcd448e46155973a40be, type: 2}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 1463337103788244, guid: f577e194773902240ada2f53ef6e2485, type: 2}
+    cost: 300
 --- !u!1001 &1342417899
 Prefab:
   m_ObjectHideFlags: 0
@@ -13460,7 +13484,7 @@ Prefab:
     - target: {fileID: 114345733874506428, guid: 27c3188604681e94db4a742afb457fd4,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 114591596573129186, guid: 27c3188604681e94db4a742afb457fd4,
         type: 2}

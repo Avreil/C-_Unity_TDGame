@@ -44,9 +44,11 @@ public class Bullet : MonoBehaviour {
         if(explosionRadius > 0f)
         {
             Explode();
+            
         } else
         {
             Damage(target);
+            
         }
 
         Destroy(target.gameObject);
